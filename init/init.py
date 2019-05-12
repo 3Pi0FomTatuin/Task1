@@ -4,6 +4,8 @@ import shutil
 import os
 import stat
 
+PYCHARM = False
+
 
 def ignore_errors(func, path, exc_info):
     print('Was ignored: ', exc_info)
@@ -32,11 +34,10 @@ if __name__ == "__main__":
     install('short_url')
     install('django')
 
-    if 'PyCharm' in sys.argv or True:
+    if PYCHARM:
         subprocess.call('git clone -n https://github.com/github/gitignore.git --depth 1')
         subprocess.call('git checkout HEAD Global/JetBrains.gitignore', cwd='gitignore')
         join_files(['django.gitignore', 'gitignore/Global/JetBrains.gitignore'], '../.gitignore')
         remove_dir('gitignore')
     else:
-        join_files(['django.gitignore'], '.gitignore')
-        remove_dir('.idea')
+        join_files(['django.gitignore', 'no_pycharm.gitignore'], '.gitignore')
