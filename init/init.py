@@ -46,6 +46,8 @@ def single_checkout(url, remote_path, local_path):
 
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
     install('short_url')
     install('django')
 
