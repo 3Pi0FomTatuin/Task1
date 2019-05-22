@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>URL shortener</title>
-</head>
-<body>
+{% extends "shortener_app/base.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+    <div id="container">
+        <input id="shorten-input" type="text" autocomplete="off" placeholder="Shorten your link">
+        <input id="shorten-button" type="submit" value="Shorten">
+
+        <ul id="own-links">
+            <template>
+                <li class="own-links__link">
+                    <span class="link__long-link"></span>
+
+                    <span class="link__short-link">
+                            <a target="_blank"></a>
+                            <button class="link-button short-link__copy-button">Copy</button>
+                        </span>
+                </li>
+            </template>
+        </ul>
+    </div>
+
+    {% if user.is_authenticated %}
+        <script>
+            document.USER_ID = '{{ user.id }}';
+        </script>
+    {% endif %}
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static "shortener_app/js/index.js" %}"></script>
+{% endblock %}

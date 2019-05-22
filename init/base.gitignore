@@ -1,0 +1,8 @@
+# [base.gitignore
+__pycache__/
+venv/
+**/migrations/
+.gitignore
+shortener_app/static/shortener_app/normalize.css
+# base.gitignore]
+

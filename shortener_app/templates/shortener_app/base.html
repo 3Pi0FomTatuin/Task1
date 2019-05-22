@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL shortener</title>
+    <link href="{% static "shortener_app/css/normalize.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "shortener_app/css/styles.css" %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav>
+    <div id="nav__left" style="float: right">
+        {% if user.is_authenticated %}
+            <div id="user-info">
+                <div id="user-info__username">{{ user.get_username }}</div>
+                <div id="user-info__email"> {{ user.email }} </div>
+            </div>
+            <a class="link-button" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a class="link-button" href="{% url 'home' %}">Home</a>
+            <a class="link-button" href="{% url 'login' %}">Login</a>
+            <a class="link-button" href="{% url 'signup' %}">Signup</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div id="wrapper">
+    {% block content %}{% endblock %}
+</div>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

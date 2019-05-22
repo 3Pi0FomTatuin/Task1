@@ -1,0 +1,14 @@
+{% extends "shortener_app/base.html" %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static "shortener_app/js/form_init.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <form id="signup-form" method="post">
+        {% include "shortener_app/form_base.html" %}
+
+        <button id="signup-form__signup-button" type="submit">Sign up</button>
+    </form>
+{% endblock %}

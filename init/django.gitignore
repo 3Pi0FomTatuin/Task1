@@ -1,7 +1,0 @@
-# [django.gitignore
-__pycache__/
-venv/
-**/migrations/
-.gitignore
-# django.gitignore]
-
