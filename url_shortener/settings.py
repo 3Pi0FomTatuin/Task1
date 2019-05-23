@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# noinspection SpellCheckingInspection
 SECRET_KEY = 'p-f+(eoymqe=ildy_q&w^5*6hyxs3-%2zdpapm%ghzg79(mbl3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -119,6 +120,8 @@ LOGIN_URL = '/@login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'shortener_app.CustomUser'
+# noinspection PyRedeclaration
 USE_I18N = False
+# noinspection PyRedeclaration
 USE_L10N = False
 # local]

@@ -1,8 +1,8 @@
 # [base.gitignore
 __pycache__/
 venv/
-**/migrations/
+db.sqlite3
 .gitignore
-shortener_app/static/shortener_app/normalize.css
+shortener_app/static/shortener_app/css/normalize.css
 # base.gitignore]
 

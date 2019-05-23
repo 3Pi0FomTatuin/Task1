@@ -155,6 +155,7 @@ form button, #login-form__signup-button {
 	background: rgb(26, 115, 232);
 	color: white;
 	font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
+	/*noinspection CssFloatPxLength*/
 	letter-spacing: .25px;
 	line-height: 20px;
 	min-width: 88px;

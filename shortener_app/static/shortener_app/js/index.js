@@ -22,6 +22,7 @@ function isValidURL(string) {
 }
 
 function copyTextToClipboard(text) {
+    // noinspection JSUnresolvedVariable
     if (!navigator.clipboard) {
         let textArea = document.createElement("textarea");
         textArea.value = text;
@@ -39,6 +40,7 @@ function copyTextToClipboard(text) {
         return;
     }
 
+    // noinspection JSUnresolvedFunction, JSUnresolvedVariable
     navigator.clipboard.writeText(text).catch(console.error);
 }
 
