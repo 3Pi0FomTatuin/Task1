@@ -4,14 +4,15 @@ import stat
 import subprocess
 import sys
 
-PYCHARM = True
 
-
+# Fix: some .git directory files cannot be deleted due to readonly attribute
 def ignore_errors(func, path, exc_info):
-    print('Was ignored: ', exc_info)
-    if not os.access(path, os.W_OK):
-        os.chmod(path, stat.S_IWUSR)
-        func(path)
+    if type(exc_info[1]) == PermissionError and '.git' in exc_info[1].filename:
+        if not os.access(path, os.W_OK):
+            os.chmod(path, stat.S_IWUSR)
+            func(path)
+    else:
+        raise exc_info[1]
 
 
 def remove_file(path):
@@ -46,7 +47,12 @@ def single_checkout(url, remote_path, local_path):
 
 
 if __name__ == "__main__":
+    PYCHARM = True
+
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    if 'nopycharm' in map(str.lower, sys.argv):
+        PYCHARM = False
 
     install('short_url')
     install('django')
