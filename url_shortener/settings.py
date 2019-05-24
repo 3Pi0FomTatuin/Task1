@@ -122,4 +122,5 @@ LOGOUT_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'shortener_app.CustomUser'
 # noinspection PyRedeclaration
 ALLOWED_HOSTS = ['short.pythonanywhere.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # local]
