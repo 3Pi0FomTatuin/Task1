@@ -24,7 +24,7 @@ def remove_dir(path):
 
 
 def install(package):
-    subprocess.call(f'"{sys.executable}" -m pip install --user "{package}"', shell=True)
+    subprocess.call(f'"{sys.executable}" -m pip install "{package}"', shell=True)
 
 
 def join_files(file_names, output_path):
