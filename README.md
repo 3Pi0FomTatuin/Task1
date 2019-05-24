@@ -1,5 +1,5 @@
 # Task 1
-_names wrapped by "$" sign should be replaced_
+_names wrapped by "<>" should be replaced by you in way it needs_
 ## PyCharm:
 
 1. Open PyCharm
@@ -8,24 +8,25 @@ _names wrapped by "$" sign should be replaced_
 4. Enter "https://github.com/3Pi0FomTatuin/Task1.git" into URL input
 5. Choose Directory
 6. Click "Yes" in a opened prompt
-7. Go to File -> Settings -> Project: $PROJECT_NAME$ -> Project Interpreter
+7. On the main menu, choose File | Settings | Project: <project name> | Project Interpreter
 8. Click on the cogwheel (settings button)
 9. Click "Add"
 10. Configure virtual environment and click "OK"; "Apply"
 11. Exit settings window
 12. Wait for skeleton building tasks
 13. In the "Project" tool window (by default located on the left of the screen) right click on init/init.py and select " 'Run init' "
-14.
+14. On the main menu, choose Tools | Run manage.py task. The manage.py utility starts in its own console.
+15. Type `runserver`
 	
 ## From Terminal:
 
-1. Go to root of the project (e.g. $PROJECT_FOLDER_ROOT$="D:\\") 
+1. Go to root of the project (e.g. \<project folder root>="D:\\") 
 	* Unix
 	
-		`cd $PROJECT_FOLDER_ROOT$`
+		`cd <project folder root>`
 	* Windows
 	
-		`cd /d $PROJECT_FOLDER_ROOT$`
+		`cd /d <project folder root>`
 
 2. Clone the project from GitHub
 
@@ -42,13 +43,13 @@ _names wrapped by "$" sign should be replaced_
 		`python3 -m venv venv/`
 	* Windows
 	
-		Determine your python 3 path (e.g. $PYTHON_PATH$=D:\\Programs\\Python36\\python.exe)
+		Determine your python 3 path (e.g. \<python path>=D:\\Programs\\Python36\\python.exe)
 		
 		`where python`
 		
 		and run
 		
-		`$PYTHON_PATH$ -m venv venv/`
+		`<python path> -m venv venv/`
 		
 5. Start work on virtual environment
 	* Unix
