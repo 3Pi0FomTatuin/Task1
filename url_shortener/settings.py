@@ -121,5 +121,5 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'shortener_app.CustomUser'
 # noinspection PyRedeclaration
-ALLOWED_HOSTS = ['community.pythonanywhere.com']
+ALLOWED_HOSTS = ['short.pythonanywhere.com']
 # local]
