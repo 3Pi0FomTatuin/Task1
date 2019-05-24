@@ -8,7 +8,10 @@ function blurHandler() {
     }
 }
 
-for (let input of document.querySelectorAll('.form-field input')) {
-    input.oninput = input.onfocus = inputHandler;
-    input.onblur = blurHandler;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    for (let input of document.querySelectorAll('.form-field input')) {
+        input.oninput = input.onfocus = inputHandler;
+        input.onblur = blurHandler;
+    }
+});
+

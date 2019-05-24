@@ -1,3 +1,6 @@
+{% load static %}
+<script src="{% static "shortener_app/js/form_init.js" %}"></script>
+
 {% csrf_token %}
 {% for field in form %}
     <p>
