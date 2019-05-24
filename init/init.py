@@ -24,7 +24,7 @@ def remove_dir(path):
 
 
 def install(package):
-    subprocess.call([sys.executable, '-m', 'pip', 'install', package])
+    subprocess.call(f'"{sys.executable}" -m pip install --user "{package}"', shell=True)
 
 
 def join_files(file_names, output_path):
@@ -36,12 +36,12 @@ def join_files(file_names, output_path):
 
 
 def single_checkout(url, remote_path, local_path):
-    subprocess.call(f'git clone -n {url} --depth 1')
+    subprocess.call(f'git clone -n "{url}" --depth 1', shell=True)
     temp = url.split('/')[-1]
     if not temp.endswith('.git'):
         raise Exception('Given url is not git-like!')
     dir_name = temp[:-4]
-    subprocess.call(f'git checkout HEAD {remote_path}', cwd=dir_name)
+    subprocess.call(f'git checkout HEAD "{remote_path}"', shell=True, cwd=dir_name)
     shutil.move(os.path.join(dir_name, remote_path), local_path)
     remove_dir(dir_name)
 
@@ -57,8 +57,8 @@ if __name__ == "__main__":
     install('short_url')
     install('django')
 
+    single_checkout('https://github.com/github/gitignore.git', 'Global/JetBrains.gitignore', 'JetBrains.gitignore')
     if PYCHARM:
-        single_checkout('https://github.com/github/gitignore.git', 'Global/JetBrains.gitignore', 'JetBrains.gitignore')
         join_files(['base.gitignore', 'JetBrains.gitignore'], '../.gitignore')
         remove_file('JetBrains.gitignore')
     else:
