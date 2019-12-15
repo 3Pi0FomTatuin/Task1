@@ -5,7 +5,7 @@ _names wrapped by "<>" should be replaced by you in way it needs_
 1. Open PyCharm
 2. On the "Welcome to PyCharm" window click "Checkout from Version Control"
 3. Select Git
-4. Enter "https://github.com/3Pi0FomTatuin/Task1.git" into URL input
+4. Enter "https://github.com/vinnik-dmitry07/Task1.git" into URL input
 5. Choose Directory
 6. Click "Yes" in a opened prompt
 7. On the main menu, choose File | Settings | Project: <project name> | Project Interpreter
