@@ -62,7 +62,7 @@ _names wrapped by "<>" should be replaced by you in way it needs_
 6. * Run initialization script with "nopycharm" argument
 		
 		`python init/init.py nopycharm`
-	* or set Pycharm to False in the _init/init.py_ and run
+	* or set PYCHARM to False in the _init/init.py_ and run
 		
 		`python init/init.py`
 		
