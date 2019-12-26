@@ -1,4 +1,4 @@
-# Task 1
+# Task 1 - URL shortener.
 _names wrapped by "<>" should be replaced by you in way it needs_
 ## PyCharm:
 
