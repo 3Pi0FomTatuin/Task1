@@ -1,6 +1,9 @@
 # Task 1 - URL shortener.
+![Screenshot](Screenshot.png)
+
+## Deploy
 _names wrapped by "<>" should be replaced by you in way it needs_
-## PyCharm:
+### PyCharm:
 
 1. Open PyCharm
 2. On the "Welcome to PyCharm" window click "Checkout from Version Control"
@@ -18,7 +21,7 @@ _names wrapped by "<>" should be replaced by you in way it needs_
 14. On the main menu, choose Tools | Run manage.py task. The manage.py utility starts in its own console.
 15. Type `runserver`
 	
-## From Terminal:
+### From Terminal:
 
 1. Go to root of the project (e.g. \<project folder root>="D:\\") 
 	* Unix
